@@ -58,7 +58,6 @@
         }).addTo(map);
 
         getGeoJSON();
-        //getTopoJSON();
         addInfo();
 
         function getGeoJSON() {
@@ -67,6 +66,7 @@
             });
         }
 
+        //if I wanted topoJSON
         function getTopoJSON() {
             $.getJSON("processed/spotsy_buildings_topo.json", function(buildings) {
                 drawMap(buildings);
@@ -114,7 +114,7 @@
                     }
                 },
                 interactive: true,
-                maxZoom: 22,
+                maxZoom: 17,
                 tolerance: 7,
                 extent: 4096,
                 buffer: 64,
